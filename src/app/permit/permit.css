@@ -1,0 +1,7 @@
+.main{
+    margin-left: 300px;
+    display: flex;
+    position: absolute;
+    top: 0; 
+    /* background-color: #ebb1b1;    */
+}

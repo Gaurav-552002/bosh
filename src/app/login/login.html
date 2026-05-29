@@ -1,0 +1,103 @@
+<div class="main-container">
+  <!-- Logo and image  -->
+  
+  <!-- <div class="bg">
+    <img src="/assets/bg.png">  
+  </div> -->
+  <div class="logo">
+    <img src="/assets/icon.svg" alt="logo">
+  </div>
+
+  <div class="delivery-img">
+    <img src="/assets/man.svg" alt="man">
+  </div>
+
+  <!-- Login Box -->
+  <div class="login-container">
+
+    <div class="heading">
+      Welcome To Bosch
+    </div>
+
+    <div class="login-box">
+
+      <input
+        type="text"
+        placeholder="Enter Login ID*"
+        [(ngModel)]="loginId"
+      />
+
+      <input
+        type="password"
+        placeholder="Enter Password*"
+        [(ngModel)]="password"
+      />
+
+      <p class="forgot-password">
+        Forgot Password ?
+      </p>
+
+      <button (click)="login()">
+        Login
+      </button>
+
+      <p class="error" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </p>
+
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img src="/assets/icon.svg" width="150">
+<img src="/assets/bg.svg" width="150"> -->
+
+
+<!-- <div class="login-wrapper">
+
+  <div class="login-card">
+
+    <h2 class="title">Welcome To Bosch</h2>
+
+    <input 
+      type="text"
+      placeholder="Enter Login ID*"
+      class="input-box"
+    >
+
+    <input 
+      type="password"
+      placeholder="Enter Password*"
+      class="input-box"
+    >
+
+    <div class="forgot">
+      Forgot Password ?
+    </div>
+
+    <button class="login-btn">
+      Login
+    </button>
+
+  </div>
+
+</div> -->

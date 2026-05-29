@@ -1,0 +1,95 @@
+<nav class="bosch-sidebar">
+  <!-- Logo -->
+  <div class="sidebar-logo">
+    <div class="logo-icon">
+      <img src="assets/icon.svg" alt="Bosch Logo" class="logo-image">
+    </div>
+  </div>
+
+  <!-- Navigation Items -->
+  <ul class="sidebar-nav">
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/dashboard">
+        <span class="nav-icon">
+          <img src="assets/icon_dashboard.svg" alt="Dashboard Icon">
+        </span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/create-appointment">
+        <span class="nav-icon">
+          <img src="assets/icon_appointment.svg" alt="Create Appointment Icon">
+        </span>
+        <span class="nav-label">Create Appointment</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/internal-meeting">
+        <span class="nav-icon">
+          <img src="assets/Internal.svg" alt="Internal Meeting Icon">
+        </span>
+        <span class="nav-label">Internal Meeting</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/masters">
+        <span class="nav-icon">
+          <img src="assets/Masters.svg" alt="Masters Icon">
+        </span>
+        <span class="nav-label">Masters</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/e-register">
+        <span class="nav-icon">
+          <img src="assets/Register.svg" alt="Register Icon">
+        </span>
+        <span class="nav-label">E – Register</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/approval">
+        <span class="nav-icon">
+          <img src="assets/Approval.svg" alt="Approval Icon">
+        </span>
+        <span class="nav-label">Approval</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/work-permit">
+        <span class="nav-icon">
+          <img src="assets/ep_list.svg" alt="Work Permit Icon">
+        </span>
+        <span class="nav-label">Work Permit <br>Approval List</span>
+      </a>
+    </li>
+
+
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/report">
+        <span class="nav-icon">
+          <img src="assets/Report.svg" alt="Report Icon">
+        </span>
+        <span class="nav-label">Report</span>
+      </a>
+    </li>
+
+    
+    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" routerLink="/blacklist">
+        <span class="nav-icon">
+          <img src="assets/Blacklist.svg" alt="Blacklist Icon">
+        </span>
+        <span class="nav-label">Blacklist</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

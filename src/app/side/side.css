@@ -1,0 +1,256 @@
+/* =============================================
+   Bosch Sidebar Component Styles
+   sidebar.component.scss
+   ============================================= */
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.bosch-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 1072px;
+  /* min-height: 100vh; */
+  background: linear-gradient(160deg, #EB1C24 0%, #851014 100%);
+  padding: 0;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+
+  /* Subtle inner highlight for depth */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.06) 0%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+}
+
+/* ---- Logo ---- */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  margin: 16px 14px 24px 14px;
+  border-radius: 27px;
+  padding-left: 61px;
+  /* padding: 10px 14px; */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  .logo-icon {
+    width: 178.48px;
+    height: 57px;
+    top: 14px;
+
+    .logo-image {
+      
+      width: 100%;
+      height: 100%;
+      
+      object-fit: contain;
+    }
+  }
+
+  .logo-text {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #cc0000;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+/* ---- Nav List ---- */
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ---- Nav Item ---- */
+.nav-item {
+  position: relative;
+  margin: 0 8px;
+  border-radius: 8px;
+  left: 61px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    /* background: #fff; */
+
+    .nav-label {
+      color: #fff;
+    }
+  }
+
+  &.active,
+  &.router-link-active {
+
+    .nav-link {
+      &::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 3px;
+        
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    .nav-label {
+      color: #111111;
+      font-weight: 700;
+    }
+
+    .nav-icon img {
+      filter: brightness(0.6) saturate(1.8) contrast(1.2) drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+      transform: scale(1.08);
+    }
+
+    .nav-icon svg,
+    .nav-icon {
+      color: #111111;
+      opacity: 1;
+    }
+  }
+}
+
+/* ---- Nav Link ---- */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  /* background-color: rgba(138, 196, 141, 0.47); */
+  width: 240px;
+  height: 47px;
+  border-radius: 10px;
+}
+
+/* ---- Nav Icon ---- */
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+  }
+}
+
+/* Badge-style icon (for E-Register "R") */
+.icon-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: #cc0000;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+}
+
+/* ---- Nav Label ---- */
+.nav-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+  white-space: normal;
+}
+
+/* ---- Responsive (collapsed for smaller screens) ---- */
+@media (max-width: 768px) {
+  .bosch-sidebar {
+    width: 64px;
+  }
+
+  .sidebar-logo {
+    padding: 8px;
+    justify-content: center;
+
+    .logo-text {
+      display: none;
+    }
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background: green;
+  border-radius: 30px;
+}
+
+.nav-item.active .nav-label {
+  color: rgb(255, 255, 255);
+}
+
+/* Icon highlight when active */
+.nav-item .nav-icon img {
+  transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease;
+}
+
+.nav-item.active .nav-icon img {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1));
+}
