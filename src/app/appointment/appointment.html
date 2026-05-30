@@ -1,5 +1,93 @@
 <div class="main">
-    <p>appointment works!</p>
+        <!-- Header -->
+    <div class="header">
+        <img src="assets\dash.svg" alt="logo" class="logo">
+      <!-- <h1>Dashboard</h1> -->
+
+      <div class="profile">
+        Welcome Back, <span>gaurav</span>
+        
+        <div class="icons">
+          <img src="assets\profile.svg">
+          <img src="assets\ghanta.svg">
+        </div>
+      </div>
+
+      
+
+
+    </div>
+  
+
+    <!-- Header -->
+    <div class="top-section">
+      <h1 class="page-title">Appointment List</h1>
+
+      <div class="action-section">
+        <!-- Search Box -->
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Search"
+            [(ngModel)]="searchText"
+          />
+          <span class="search-icon">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+
+        <!-- Add Button -->
+        <button class="add-btn" (click)="addNew()">
+          Add New
+          <span class="plus-icon">+</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Table Card -->
+    <div class="table-card">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Sr.No</th>
+            <th>Visitor Name</th>
+            <th>Visitor Firm</th>
+            <th>Visit Date</th>
+            <th>Visit Time</th>
+            <th>Edit / Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of filteredAppointments(); let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.visitorName }}</td>
+            <td>{{ item.visitorFirm }}</td>
+            <td>{{ item.visitDate }}</td>
+            <td>{{ item.visitTime }}</td>
+            <td class="action-buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+
+          <!-- Empty State -->
+          <tr *ngIf="filteredAppointments().length === 0">
+            <td colspan="6" class="empty-row">
+              No Appointments Found
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  
+
+
 
 </div>
 
+
+
+    

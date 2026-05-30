@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
+  name:string ='Gaurav'
 
 }

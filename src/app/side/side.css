@@ -238,19 +238,24 @@
 .nav-item.active {
   background: green;
   border-radius: 30px;
+  
 }
 
 .nav-item.active .nav-label {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 /* Icon highlight when active */
 .nav-item .nav-icon img {
-  transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease;
+  color: rgba(219, 51, 51, 0.85);
+  /* transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease; */
+  
+  
 }
 
 .nav-item.active .nav-icon img {
   transform: scale(1.05);
   opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1));
+  color: red;
+  filter: drop-shadow(0 0 8px rgb(255, 12, 12));
 }
