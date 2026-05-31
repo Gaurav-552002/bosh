@@ -3,5 +3,129 @@
     display: flex;
     position: absolute;
     top: 0; 
+    padding: 30px;
+    background: #f7f7f7;
+    min-height: 100vh;
+    /* flex-direction: column; */
     /* background-color: #ebb1b1;    */
+}
+
+
+.header{
+    width: 1150px;
+    /* width: 100%; */
+    height: 80px;
+    top: 20px;
+    /* left: 320px; */
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+.header.img{
+    height: 30px;
+    width: 30px;
+    padding-right: 20px;
+    gap: 0px;
+    border-radius: 32px;
+    text-align: left;
+    display: flex;
+    justify-content:left;
+}
+
+.header h1 { 
+  color: #901115;
+  width: 203px;
+  height: 54px;
+  top: 13px;
+  padding-left: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins;
+}
+
+
+.icons{
+    height: 30px;
+    width: 30px;
+    padding-right: 100px;
+    gap: 10px;
+    border-radius: 32px;
+    text-align: center;
+    display: flex;
+
+}
+
+.profile {
+  color: #8f0000;
+  font-weight: bold;
+  top: 25px;
+  left: 764px;
+  gap: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  
+
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  margin-bottom: 25px;
+  align-items: center;
+  margin-top: 20px;
+}
+.page-title {
+  color: #7a0000;
+  padding-top: 55px;
+  padding-left: 30px; 
+  font-size: 30px;
+  font-width: 217px;
+  font-weight: 600;
+}
+
+.content{
+    display: flex;
+    /* flex-direction: column; */
+    width: 1112px;
+    height: 180px;
+    position: absolute;
+    margin-top: 176px;
+    gap: 20px;
+    align-items: center;
+    
+}
+.content_2{
+    display: flex;
+    /* flex-direction: column; */
+    width: 1112px;
+    height: 180px;
+    position: absolute;
+    margin-top: 428px;
+    gap: 20px;
+    align-items: center;
+    
+}
+.content_3{
+    display: flex;
+    /* flex-direction: column; */
+    width: 1112px;
+    height: 180px;
+    position: absolute;
+    margin-top: 675px;
+    gap: 20px;
+    align-items: center;
+    
+}
+img{
+  cursor: pointer;
 }
